@@ -1,0 +1,255 @@
+body {
+    height: 100vh;              /* Altura da tela inteira */
+    display: flex;              /* Ativa flexbox */
+    justify-content: center;    /* Centraliza horizontalmente */
+    align-items: center;        /* Centraliza verticalmente */
+    background:linear-gradient(to bottom, rgb(196, 195, 195),  rgb(44, 44, 44) );
+    background-size: cover;
+    
+}
+.borda {
+    width: 800px;
+    height: 550px;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, rgb(206, 199, 181) , rgb(141, 138, 125) 100%);
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: auto; /* Auto ajuda a centralizar o conteúdo dentro do bloco, mas neste caso, o flexbox já centraliza o bloco */
+    position: relative;
+    z-index: 3; /*Propriedade que define a div borda na frente da div mesa, pois tem um z-index maior */ 
+}
+
+.tela {
+    width: 650px;
+    height: 450px;
+    cursor: pointer;
+    background-color: rgb(20, 85, 85);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 
+    inset 0 4px 8px rgba(0, 0, 0, 0.2), /* Sombra interna principal */
+    inset 4px 0 8px rgba(0, 0, 0, 0.2), /* Sombra interna na parte esquerda */
+    inset -4px 0 8px rgba(0, 0, 0, 0.2); /* Sombra interna na parte direita*/
+
+    position: relative;
+}
+
+.tela-apagada {
+    width: 650px;
+    height: 450px;
+    background-color: rgba(80, 80, 80);
+    border-radius: 10px;
+    box-shadow: 
+    inset 0 4px 8px rgba(0, 0, 0, 0.2), 
+    inset 0 -4px 8px rgba(0, 0, 0, 0.2), 
+    inset 4px 0 8px rgba(0, 0, 0, 0.2), 
+    inset -4px 0 8px rgba(0, 0, 0, 0.2); 
+
+    position: absolute;
+    
+}
+
+.tela-opacidade {
+    opacity: 0.2;
+    pointer-events: none; /* Como eu só alterei a opacidade da tela-apagada, 
+                        esse evento me permite clicar na tela atrás por deixar a tela atual sem interatividade */
+    
+}
+
+.tela-icone {
+    display: grid;
+    width: 200px;
+    grid-template-columns: auto auto;
+}
+
+
+.botao {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.8) ;  
+    background-color: rgb(158, 152, 117);
+
+    position:absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.botao-clicado {
+    box-shadow: inset 0px 2px rgba(0, 0, 0, 0.2) , 
+                inset 0px -2px rgba(0, 0, 0, 0.2) ; 
+                background-color: rgb(158, 152, 117); 
+
+}
+
+/*--------- Barra de Tarefas -------------------------------- */
+.barra {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(179, 179, 179);
+    box-shadow: 
+    inset 4px 0px 8px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid white;
+    border-bottom: 1px solid rgb(65, 65, 65);
+
+    position: absolute;
+    bottom: 0;
+}
+
+#menu-barra {
+    display: flex;
+    
+}
+
+.barra li {
+    width: 80px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.barra li a {
+    width: 80px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.barra li:hover {
+    background-color: rgb(0, 143, 229);
+    border-left: 1px solid rgb(190, 190, 190);
+    border-right: 1px solid rgb(190, 190, 190);
+
+}
+
+#sub-menu {
+    display: none; /*esconde o sub-menu */
+    position: absolute;
+    bottom: 100%; /*posiciona o sub-menu logo acima do item pai */
+    border: 1px solid black;
+
+}
+
+/*
+li:hover #sub-menu {   seleciona a única li com a ID sub-menu 
+    display: block;    não é mais necessário pois adicionei a função de click com JS
+}
+*/
+
+#sub-menu li {
+    width: 140px;
+    text-indent: 10px;
+    font-size: 12px;
+    font-family: "MS Sans Serif", "Lucida Console", Monaco, monospace;
+
+    background-color: rgb(192, 192, 192);
+    justify-content: flex-start; /*Texto começo à esquerda */
+
+}
+
+#sub-menu li a:hover {
+    font-size: 14px;
+    color: aliceblue;
+    background-color: rgb(0, 143, 229);
+    border: 1px solid rgb(226, 226, 226);
+
+}
+
+#sub-menu a {
+    width: 140px;
+    text-indent: 5px;
+    font-size: 12px;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: inherit; /* remove a cor padrão do link */
+}
+
+/*-------------- Botão Início ---------- */ 
+#inicio {
+    width: 140px;
+    justify-content: left;
+}
+
+/* Conserta a sobreposição que fazia a sombra desaparecer */
+#inicio:hover {
+    border-left: 0px;
+    box-shadow: inset 4px 0 8px rgba(0, 0, 0, 0.2); 
+
+}
+
+#janela {
+    padding-left: 10px;
+
+}
+
+/*-------------- Ícones ------------------------- */
+
+.icones {
+    position: absolute;
+    height: 70%;
+}
+
+.icones:hover {
+    height: 60%;
+
+}
+
+.icones-tela {
+    width: 50px;
+    margin: 30px;
+    margin-bottom: 40px;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.icones-tela:hover {
+    transform: scale(1.2); /* ajusta o tamanho sem interferir nos icones ao redor */
+}
+
+/* ----------------- Mesa e Monitor ------------------------------------- */
+.mesa {
+    height: 100px;
+    width: 90%;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%); /* Define como formato de trapézio */
+
+    background-color: rgb(46, 37, 37);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5));
+
+    position: absolute;
+    bottom: 0;
+    z-index: 1; /*Propriedade que define a div mesa na frente da div borda, pois tem um z-index menor */ 
+}
+
+.monitor {
+    position: absolute;
+    bottom: 5%;
+    height: 100px;
+    width: 40%;
+    border-radius: 25px;
+    background-color: rgb(105, 103, 89); 
+    z-index: 2;
+   
+}
+
+.sombra {
+    width: 700px; 
+    height: 50px; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 40%; 
+
+    position: absolute;
+    bottom: 15px;
+    left: 270px;
+    
+}

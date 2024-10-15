@@ -1,0 +1,16 @@
+Eu tive a ideia de deixar a tela mais opaca. 
+Passei algumas horas ajeitando, html, css e js. Pensei em criar uma div extra
+que ficaria com display none e quando clicasse ela apareceria com opacidade.
+Tentei alterar a opacidade da div tela-apagada ao clicar no botão. Tentei alterar essa
+opacidade por capturar a classe rgb. Mas n funciona direito pois ela captura valores proximos
+e tlvz por conta disso, eu precisava clicar no botao diversas vezes até ele funcionar.
+Tentei por ID, class e etc.
+
+
+Para isso, pensei em criar 
+alterar a opacidade da div tela-apagada quando clicasse no botão. Assim ela
+se tornar mais translúcido e poderia ver o conteúdo da div atrás.
+Surgiu outro problema, eu n conseguia clicar nos itens abaixo, isso pq a div somente havia
+alterado a opacidade. Pesquisei e descobri um recurso pointer que retirava
+a interatividade da div onde ela estava alocada e assim pude clicar nos itens
+abaixo.

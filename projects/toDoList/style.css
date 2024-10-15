@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+}
+
+
+img {
+    height: 25px;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.newContainer {
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+    margin: 0 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f2f2f2;
+
+}

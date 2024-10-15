@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gerador de Senha</title>
+</head>
+<body>
+    <div class="container">
+        <div class="range-container">
+            <input type="range" min="0" max="15" value="0" id="range">
+            <label for="range" id="rangeValue">0 caracter(es)</label>
+        </div>
+        <div class="text-container">
+            <input id="text" placeholder="Sua senha">
+            <img src="./imgs/icon-copy.png" id="icon" >
+            <span id="span">Senha</span>
+        </div>
+        <ul>
+            <li>
+                <input type="checkbox" class="checkbox" id="checkbox-upper">
+                <label for="checkbox-upper">Maiúsculas</label>
+            </li>
+            <li>
+                <input type="checkbox" class="checkbox" id="checkbox-num">
+                <label for="checkbox-num">Números</label>
+            </li>
+            <li>
+                <input type="checkbox" class="checkbox" id="checkbox-symbol">
+                <label for="checkbox-symbol">Símbolos</label>
+            </li>
+        </ul>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

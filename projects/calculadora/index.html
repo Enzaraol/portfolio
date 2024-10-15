@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="calculator">
+        <input placeholder="0" id="result">
+        <div class="button" onclick="clean()">AC</div>
+        <div class="button" onclick="invert()">+/-</div>
+        <div class="button" onclick="addCharacter('/')">/</div>
+        <div class="button" onclick="addCharacter('*')">*</div>
+        <div class="button" onclick="addCharacter('7')">7</div>
+        <div class="button" onclick="addCharacter('8')">8</div>
+        <div class="button" onclick="addCharacter('9')">9</div>
+        <div class="button" onclick="addCharacter('-')">-</div>
+        <div class="button" onclick="addCharacter('4')">4</div>
+        <div class="button" onclick="addCharacter('5')">5</div>
+        <div class="button" onclick="addCharacter('6')">6</div>
+        <div class="button" onclick="addCharacter('+')">+</div>
+        <div class="button" onclick="addCharacter('1')">1</div>
+        <div class="button" onclick="addCharacter('2')">2</div>
+        <div class="button" onclick="addCharacter('3')">3</div>
+        <div class="button" onclick="showResult()" id="equal">=</div>
+        <div class="button" onclick="addCharacter('0')" id="zero">0</div>
+        <div class="button" onclick="addCharacter('.')">.</div>
+    </div>
+    <script src="index.js"></script>    
+</body>
+</html>
